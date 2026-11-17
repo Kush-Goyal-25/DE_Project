@@ -11,15 +11,11 @@ deployment, or Metabase.
 
 ## 1. Create and activate a virtual environment
 
-```bash
-mkdir -p ~/Projects/crime-trends
-cd ~/Projects/crime-trends
-# Put these project files in this folder.
-python3 -m venv .venv
-source .venv/bin/activate
+````bash
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-pip install -r requirements.txt
-```
+python -m pip install -r requirements.txt```
 
 ## 2. Configure Socrata
 
@@ -27,7 +23,7 @@ Copy `.env.example` to `.env`:
 
 ```bash
 cp .env.example .env
-```
+````
 
 Edit `.env` and set `SOCRATA_APP_TOKEN` to your own Socrata application token.
 Do not commit `.env` to Git. The dataset is Cambridge Police Log,
@@ -37,6 +33,7 @@ dataset ID `3gki-wyrb`, on `data.cambridgema.gov`.
 
 ```bash
 python run_pipeline.py
+python -m streamlit run dashboard.py
 ```
 
 The script prints the first rows at each stage and the row counts. It does not
