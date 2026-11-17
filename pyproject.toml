@@ -1,0 +1,25 @@
+[project]
+name = "crime-trends-part-a-2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Kush-Goyal-25", email = "kush.goyal.personal@gmail.com" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=2.2,<4",
+    "plotly>=5.20",
+    "prefect>=3.0",
+    "psycopg2-binary>=2.9",
+    "python-dotenv>=1.0",
+    "sodapy>=2.2",
+    "streamlit>=1.50",
+]
+
+[project.scripts]
+crime-trends-part-a-2 = "crime_trends_part_a_2:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
